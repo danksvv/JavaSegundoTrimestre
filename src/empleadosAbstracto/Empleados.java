@@ -7,9 +7,9 @@ import lombok.Setter;
 @Setter
 
 abstract class Empleados {
-    private String nombre;
-    private String DNI;
-    private int telefono;
+    protected String nombre;
+    protected String DNI;
+    protected int telefono;
 
     public Empleados(String nombre, String DNI, int telefono) {
         this.nombre = nombre;

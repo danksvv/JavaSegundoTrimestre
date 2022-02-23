@@ -12,6 +12,6 @@ public class Temporales extends Empleados{
 
     public void consultarSalario() {
         double total = horas_trabajadas * salario_por_hora;
-        System.out.println("El salario de " + this.getNombre() + " es " + total + " por las " + horas_trabajadas + " horas laborales ");
+        System.out.println("El salario de " + nombre + " es " + total + " por las " + horas_trabajadas + " horas laborales ");
     }
 }

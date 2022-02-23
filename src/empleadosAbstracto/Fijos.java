@@ -9,6 +9,6 @@ public class Fijos extends Empleados{
     }
 
     public void consultarSalario(){
-        System.out.println("El salario mensual de " + this.getNombre() + " es " + salario_fijo);
+        System.out.println("El salario mensual de " + nombre + " es " + salario_fijo);
     }
 }
