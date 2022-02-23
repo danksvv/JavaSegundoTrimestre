@@ -23,8 +23,4 @@ public class AnalistasOverRide extends InformaticosOverRide {
 
     }
 
-    @Override
-    public String toString() {
-        return super.toString();
-    }
 }
