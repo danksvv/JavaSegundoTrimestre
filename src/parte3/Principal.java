@@ -1,12 +1,7 @@
 package parte3;
 
-import java.util.Scanner;
-
 public class Principal {
     public static void main(String[] args) {
-        Scanner keyboardIn = new Scanner(System.in);
-        double sueldo;
-        String nombre, labor;
 
         AnalistasOverRide analista1 = new AnalistasOverRide();
         ProgramadoresOverRide programador1 = new ProgramadoresOverRide();
@@ -16,19 +11,23 @@ public class Principal {
 
         // cargar y mostrar sueldos
 
-        for (int i=0; i<informaticos.length; i++){
-            System.out.println("Introduce el sueldo : ");
-            sueldo = keyboardIn.nextDouble();
-            informaticos[i].sueldoR(sueldo);
-            System.out.println("Introduce el nombre : ");
-            nombre = keyboardIn.next();
-            informaticos[i].datosR(nombre);
-            System.out.println("Introduce la labor : ");
-            labor = keyboardIn.next();
-            informaticos[i].laboresR(labor);
+        for (InformaticosOverRide informatico : informaticos){
+            if(informatico instanceof AnalistasOverRide){
+                informatico.sueldoR(1200);
+                informatico.laboresR("Analizar codigo");
+                informatico.datosR("Andres");
+            }
+            else if (informatico instanceof ProbadorOverRide){
+                informatico.sueldoR(1200);
+                informatico.laboresR("Analizar codigo");
+                informatico.datosR("Andres");
+            }
+            else if (informatico instanceof ProgramadoresOverRide) {
+                informatico.sueldoR(1200);
+                informatico.laboresR("Analizar codigo");
+                informatico.datosR("Andres");
+            }
         }
-
-        keyboardIn.close();
 
     }
 
